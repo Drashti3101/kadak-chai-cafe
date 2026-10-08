@@ -46,7 +46,7 @@ Orders and reservations are intentionally frontend-only demo features. Data is s
 ## 🔗 Portfolio links
 
 - **GitHub:** https://github.com/Drashti3101
-- **Live demo:** Run `index.html` locally, or publish the folder with GitHub Pages / Netlify.
+- **Live demo:** https://drashti3101.github.io/kadak-chai-cafe/
 
 ## 📸 Project preview
 
