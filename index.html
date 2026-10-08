@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kadak Chai Cafe | Chai, Coffee and Snacks</title>
+<meta name="description" content="Kadak Chai Cafe — a responsive frontend portfolio project with menu search, cart, reservations and dark mode.">
+<meta name="theme-color" content="#0C2622">
+<meta property="og:title" content="Kadak Chai Cafe">
+<meta property="og:description" content="A polished responsive cafe ordering experience built with HTML, CSS, Bootstrap and JavaScript.">
+<meta property="og:type" content="website">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand logo" href="#top">Kadak Chai</a>
+    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav" aria-label="Menu"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+        <li class="nav-item"><a class="nav-link" href="#project">Project</a></li>
+        <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="#orders">My orders</a></li>
+        <li class="nav-item"><a class="nav-link" href="#story">Our story</a></li>
+        <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+        <li class="nav-item"><a class="nav-link" href="#book">Reserve table</a></li>
+        <li class="nav-item"><button type="button" class="theme-btn" id="themeBtn" aria-label="Switch to dark mode">Dark</button></li>
+        <li class="nav-item">
+          <button type="button" class="cart-pill" id="cartBtn" data-bs-toggle="offcanvas" data-bs-target="#cartPanel" aria-label="Open your order">
+            Your order <span class="count" id="cartCount">0</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main id="main-content">
+<header class="hero" id="top">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-7">
+        <div class="eyebrow"><span aria-hidden="true">✦</span> Indian chai &amp; comfort food</div>
+        <h1>Chai made slow, served <em>kadak</em>.</h1>
+        <p class="lead my-4">Fresh ginger, hand-crushed elaichi and buffalo milk, brewed on a real flame. Open daily, 7 AM to 11 PM.</p>
+        <a href="#menu" class="btn btn-gold me-2">Order now</a>
+        <a href="#book" class="btn btn-line">Reserve a table</a>
+        <div class="hero-points" aria-label="Cafe highlights">
+          <span>☕ Brewed fresh</span><span>⚡ Quick ordering</span><span>📱 Mobile friendly</span>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="cup-wrap">
+          <svg viewBox="0 0 300 300" class="cup" role="img" aria-label="Steaming cup of chai">
+            <path class="steam" d="M110 110 q-20-25 0-45 q20-20 0-40"/>
+            <path class="steam" d="M150 110 q-20-25 0-45 q20-20 0-40"/>
+            <path class="steam" d="M190 110 q-20-25 0-45 q20-20 0-40"/>
+            <path d="M70 130 h160 v70 a60 60 0 0 1 -60 60 h-40 a60 60 0 0 1 -60 -60z" fill="#F5B800"/>
+            <path d="M230 150 h22 a28 28 0 0 1 0 56 h-30" fill="none" stroke="#F5B800" stroke-width="14" stroke-linecap="round"/>
+            <ellipse cx="150" cy="130" rx="80" ry="14" fill="#B5651D"/>
+            <ellipse cx="150" cy="282" rx="105" ry="10" fill="#000" opacity=".25"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 50" preserveAspectRatio="none" aria-hidden="true"><path fill="#E8F2EC" d="M0 50V20Q360-20 720 20T1440 20V50z"/></svg>
+</header>
+
+<section id="project" class="project-sec">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-7">
+        <div class="section-kicker">FEATURED PROJECT</div>
+        <h2 class="sec-title">A complete frontend cafe experience.</h2>
+        <p class="sec-sub">Kadak Chai Cafe is a portfolio project designed to demonstrate responsive UI development, JavaScript interactions and practical frontend problem-solving.</p>
+        <div class="tech-list" aria-label="Technologies used">
+          <span>HTML5</span><span>CSS3</span><span>Bootstrap 5</span><span>JavaScript</span><span>LocalStorage</span>
+        </div>
+        <div class="project-actions">
+          <a class="btn btn-ink rounded-pill" href="https://github.com/Drashti3101" target="_blank" rel="noopener">View GitHub</a>
+          <a class="btn btn-line-dark" href="#menu">Explore the project</a>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="project-card">
+          <div class="project-card-top"><span class="status-dot"></span><span>Frontend case study</span></div>
+          <ul>
+            <li>Dynamic menu search and category filters</li>
+            <li>Interactive cart and GST calculation</li>
+            <li>Validated table reservation flow</li>
+            <li>Persistent orders and theme preference</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="container">
+    <div class="section-kicker">MENU</div>
+    <h2 class="sec-title">Comfort in every cup.</h2>
+    <p class="sec-sub">Search the menu, filter by category and build your order. Everything is saved on this device.</p>
+    <input type="search" class="form-control search" id="q" placeholder="Search chai, coffee, snacks" aria-label="Search menu">
+    <div class="filters" id="filters">
+      <button type="button" class="on" data-f="all" aria-pressed="true">All</button><button type="button" data-f="chai" aria-pressed="false">Chai</button><button type="button" data-f="coffee" aria-pressed="false">Coffee</button><button type="button" data-f="snack" aria-pressed="false">Snacks</button>
+    </div>
+    <div class="row g-4" id="grid"></div>
+  </div>
+</section>
+
+<section id="orders" class="orders-sec">
+  <div class="container">
+    <div class="d-flex flex-wrap justify-content-between align-items-end">
+      <div>
+        <div class="section-kicker">ORDER TRACKING</div>
+        <h2 class="sec-title">My orders</h2>
+        <p class="sec-sub">Every order you place appears here with a simple live status.</p>
+      </div>
+      <button class="btn btn-ink rounded-pill mb-4" id="clearOrders">Clear history</button>
+    </div>
+    <div class="row g-4" id="orderList"></div>
+  </div>
+</section>
+
+<section class="band" id="story">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-6">
+        <h2 class="sec-title">Started on a street corner</h2>
+        <p>In 2019 we began with one kettle and one stool. Today we still boil every cup to order, because good chai cannot be rushed.</p>
+      </div>
+      <div class="col-lg-6">
+        <div class="row text-center">
+          <div class="col-4"><div class="num" data-n="7">0</div><p>Years</p></div>
+          <div class="col-4"><div class="num" data-n="9">0</div><p>Menu items</p></div>
+          <div class="col-4"><div class="num" data-n="500">0</div><p>Cups a day</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="container">
+    <div class="section-kicker text-center">REVIEWS</div><h2 class="sec-title text-center mb-4">Loved by chai people.</h2>
+    <div id="rev" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active"><div class="review"><p>Best adrak chai in the city. I come every morning before work.</p><span>Hetal, designer</span></div></div>
+        <div class="carousel-item"><div class="review"><p>Bun maska is soft, buttery and perfect with a cutting chai.</p><span>Jay, student</span></div></div>
+        <div class="carousel-item"><div class="review"><p>Quiet corners, fast wifi and honest prices. Great for work.</p><span>Mehul, developer</span></div></div>
+      </div>
+      <button class="carousel-control-prev" data-bs-target="#rev" data-bs-slide="prev" aria-label="Previous"><span class="carousel-control-prev-icon"></span></button>
+      <button class="carousel-control-next" data-bs-target="#rev" data-bs-slide="next" aria-label="Next"><span class="carousel-control-next-icon"></span></button>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="container">
+    <div class="row justify-content-center g-5">
+      <div class="col-lg-6">
+        <div class="section-kicker">BOOK A TABLE</div><h2 class="sec-title">Make room for good chai.</h2>
+        <p class="sec-sub">We hold your table for 15 minutes after your booking time. You can keep up to 5 reservations.</p>
+        <form id="bookForm" novalidate>
+          <div class="row g-3">
+            <div class="col-sm-6"><label class="form-label" for="bn">Name</label><input class="form-control" id="bn" autocomplete="name" required><div class="invalid-feedback">Enter your name.</div></div>
+            <div class="col-sm-6"><label class="form-label" for="bp">Mobile number</label><input class="form-control" id="bp" inputmode="tel" maxlength="16" autocomplete="tel" placeholder="98765 43210" required><div class="invalid-feedback">Enter a valid mobile number (10 digits).</div></div>
+            <div class="col-sm-4"><label class="form-label" for="bd">Date</label><input type="date" class="form-control" id="bd" required><div class="invalid-feedback">Pick a date.</div></div>
+            <div class="col-sm-4"><label class="form-label" for="bt">Time</label><select class="form-select" id="bt" required></select><div class="invalid-feedback">Pick a future time.</div></div>
+            <div class="col-sm-4"><label class="form-label" for="bg">Guests</label><select class="form-select" id="bg"></select></div>
+            <div class="col-12"><label class="form-label" for="bnote">Note (optional)</label><input class="form-control" id="bnote" maxlength="80" placeholder="Birthday, window seat, high chair"></div>
+            <div class="col-12"><button class="btn btn-gold" type="submit">Reserve table</button></div>
+          </div>
+        </form>
+      </div>
+      <div class="col-lg-5">
+        <div id="myBooking"></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container d-flex flex-wrap justify-content-between gap-2">
+    <span>&copy; <span id="yr"></span> Kadak Chai Cafe. Demo project.</span>
+    <span>Frontend portfolio project · Built by <a href="https://github.com/Drashti3101" target="_blank" rel="noopener" aria-label="Drashti Ajani on GitHub">Drashti Ajani</a></span>
+  </div>
+</footer>
+
+<!-- Order panel -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="cartPanel" aria-labelledby="cartTitle">
+  <div class="offcanvas-header">
+    <h2 class="h4 m-0" id="cartTitle">Your order</h2>
+    <button class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body d-flex flex-column">
+    <div id="cartList" class="flex-grow-1"></div>
+    <div id="cartFoot" class="pt-3 border-top">
+      <div class="btn-group w-100 mb-3" role="group" aria-label="Order type">
+        <input type="radio" class="btn-check" name="otype" id="dine" value="Dine-in" checked><label class="btn btn-ink" for="dine">Dine-in</label>
+        <input type="radio" class="btn-check" name="otype" id="take" value="Takeaway"><label class="btn btn-ink" for="take">Takeaway</label>
+      </div>
+      <input class="form-control mb-3" id="oname" placeholder="Your name" autocomplete="name">
+      <div class="d-flex justify-content-between"><span>Subtotal</span><span id="sub"></span></div>
+      <div class="d-flex justify-content-between"><span>GST (5%)</span><span id="gst"></span></div>
+      <div class="d-flex justify-content-between fw-bold fs-5 my-2"><span>Total</span><span id="tot"></span></div>
+      <button class="btn btn-gold w-100" id="placeBtn">Place order</button>
+      <button class="btn btn-link text-secondary w-100 mt-1" id="clearBtn">Clear order</button>
+    </div>
+  </div>
+</div>
+
+<!-- Confirmation modal (used for order and reservation) -->
+<div class="modal fade" id="doneModal" tabindex="-1" aria-labelledby="doneTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered"><div class="modal-content" id="doneBody"></div></div>
+</div>
+
+<div class="toast-box" id="toast" role="status"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
