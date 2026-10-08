@@ -53,8 +53,8 @@ Orders and reservations are intentionally frontend-only demo features. Data is s
 For a portfolio case study, add 2 screenshots of the finished page: one desktop view and one mobile view. This keeps the repository lightweight while giving recruiters a quick visual overview.
 
 ![Desktop view](Desktop.png)
-![Mobile view](Mobile.png)
 ![Dark mode](Dark.png)
+![Mobile view](Mobile.png)
 
 ## 🎯 Portfolio value
 
