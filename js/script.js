@@ -12,8 +12,9 @@ const ITEMS = [
   { id: 9, n: "Samosa",          p: 20, c: "snack",  e: "\uD83E\uDD5F" }
 ];
 
-/* Put your WhatsApp number here: country code + number, no plus sign, no spaces. Example: 919876543210 */
-const WHATSAPP_NUMBER = "918980906498";
+/* Optional: to turn on the WhatsApp buttons, put a business number here (country code + number, no plus sign, no spaces).
+   Example: 919876543210. Leave it empty ("") and the WhatsApp buttons stay hidden. */
+const WHATSAPP_NUMBER = "";
 /* To show real food photos: put images in an "images" folder and add img:"images/masala-chai.jpg" to an item above. */
 
 /* ---------- helpers ---------- */
@@ -39,6 +40,9 @@ function say(msg) {
 }
 
 const waLink = text => `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+/* WhatsApp button is shown only when a number is set above */
+const waButton = (label, text) => WHATSAPP_NUMBER
+  ? `<a class="btn-wa mt-3" href="${waLink(text)}" target="_blank" rel="noopener">${label}</a>` : "";
 
 /* Confirmation ticket shown after an order or a reservation */
 function showTicket({ title, subtitle, rows, code, codeLabel, extra = "" }) {
@@ -192,7 +196,7 @@ $("#placeBtn").addEventListener("click", () => {
   setTimeout(() => showTicket({
     title: "Order placed", subtitle: `Ready in about ${mins} minutes`,
     rows: ticketRows, code, codeLabel: "Order number. Show this at the counter.",
-    extra: `<a class="btn-wa mt-3" href="${waLink(waText)}" target="_blank" rel="noopener">Send this order on WhatsApp</a>
+    extra: `${waButton("Send this order on WhatsApp", waText)}
       <a href="#orders" class="d-block text-center mt-3" data-bs-dismiss="modal">See it in My orders</a>`
   }), 350);
 });
@@ -344,7 +348,7 @@ $("#bookForm").addEventListener("submit", e => {
   showTicket({
     title: "Table reserved", subtitle: "We will hold it for 15 minutes",
     rows, code: booking.code, codeLabel: "Booking ID. Show this when you arrive.",
-    extra: `<a class="btn-wa mt-3" href="${waLink(waText)}" target="_blank" rel="noopener">Confirm on WhatsApp</a>`
+    extra: waButton("Confirm on WhatsApp", waText)
   });
   e.target.reset(); bg.value = 2; bd.value = bd.min; fillTimes();
 });

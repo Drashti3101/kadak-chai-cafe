@@ -10,7 +10,7 @@ A polished responsive cafe ordering experience created as a frontend portfolio p
 - Shopping cart with quantity controls and GST calculation
 - Demo checkout with order ticket and local order history
 - Table reservation flow with validation
-- WhatsApp-ready order/reservation messages
+- Optional WhatsApp order/reservation buttons (hidden until a number is set)
 - Light / dark theme with saved preference
 - LocalStorage persistence
 - Live order progress state
@@ -39,22 +39,18 @@ Open `index.html` in a browser. The project uses Bootstrap and Google Fonts from
 
 ## ⚙️ Demo configuration
 
-Before using WhatsApp functionality with a real business number, update `WHATSAPP_NUMBER` in `js/script.js`.
+The WhatsApp buttons are off in this demo. To turn them on with a real business number, set `WHATSAPP_NUMBER` in `js/script.js`.
 
 Orders and reservations are intentionally frontend-only demo features. Data is stored in the browser's `localStorage`; no backend or payment system is connected.
 
 ## 🔗 Portfolio links
 
 - **GitHub:** https://github.com/Drashti3101
-- **Live demo:** https://drashti3101.github.io/kadak-chai-cafe/
+- **Live demo:** Run `index.html` locally, or publish the folder with GitHub Pages / Netlify.
 
 ## 📸 Project preview
 
 For a portfolio case study, add 2 screenshots of the finished page: one desktop view and one mobile view. This keeps the repository lightweight while giving recruiters a quick visual overview.
-
-![Desktop view](Desktop.png)
-![Dark mode](Dark.png)
-![Mobile view](Mobile.png)
 
 ## 🎯 Portfolio value
 
